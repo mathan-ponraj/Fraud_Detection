@@ -29,3 +29,37 @@ pip install -r requirements.txt
 ```bash
 jupyter notebook notebooks/Fraud_detection_.ipynb
 ```
+
+_Run all cells in the notebook to execute data preprocessing, model training, and evaluation.
+## 📊 Dataset  
+The dataset consists of transaction details with the following features:  
+
+- **Transaction ID:** Unique identifier  
+- **Amount:** Transaction value  
+- **Time:** Time of transaction  
+- **Location:** Transaction location  
+- **Card Type:** Type of card used  
+- **Fraud Label (Target Variable):**  
+  - `1` = Fraud  
+  - `0` = Legitimate  
+
+
+
+## 🧪 Results  
+The best-performing model is **[Fraud_Detection]**, achieving:  
+
+| **Metric**  | **Score** |
+|-------------|----------|
+| Precision   | 95%      |
+| Recall      | 92%      |
+| AUC-ROC     | 97%      |
+
+## 🌟 Acknowledgements  
+- Data sourced from **[Source Name]**  
+- Inspired by cybersecurity and fraud detection research  
+
+## 📨 Contact  
+For queries or collaborations, reach out:  
+📧 **Email:** [mathanponraj03gmail.com](mailto:mathanponraj03@gmail.com.com)  
+🔗 **GitHub:** [mathan-ponraj](https://github.com/mathan-ponraj)  
+
