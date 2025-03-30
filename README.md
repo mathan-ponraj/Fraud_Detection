@@ -7,7 +7,7 @@ This project aims to detect fraudulent transactions using machine learning techn
 - **Exploratory Data Analysis (EDA):** Visualizing transaction patterns and uncovering fraud trends.  
 - **Data Preprocessing:** Handling missing values, encoding categorical data, and normalizing numerical features.  
 - **Feature Engineering:** Identifying key features that influence fraud detection.  
-- **Model Building:** Training and evaluating classification models such as Logistic Regression, Random Forest, and XGBoost.  
+- **Model Building:** Training and evaluating classification models such as Logistic Regression and Random Forest.  
 - **Evaluation Metrics:** Performance assessment using Precision, Recall, F1-score, and AUC-ROC.  
 
 ## 🛠️ Tools and Technologies  
