@@ -20,11 +20,12 @@ This project aims to detect fraudulent transactions using machine learning techn
 ```bash
 git clone https://github.com/yourusername/fraud-detection.git
 cd fraud-detection
-
+```
 ### **2️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
-
+```
 ### **3️⃣ Run the Jupyter Notebook
-
+```bash
 jupyter notebook notebooks/Fraud_detection_.ipynb
 ```
