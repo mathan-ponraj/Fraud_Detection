@@ -1,0 +1,2 @@
+# Fraud_Detection
+A machine learning-based fraud detection model that identifies fraudulent transactions using data preprocessing, exploratory analysis, and classification algorithms. The model is evaluated using precision, recall, and AUC-ROC for high accuracy.
