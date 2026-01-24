@@ -1,92 +1,102 @@
-# Fraud Detection Model
+# Financial Fraud Detection using Machine Learning
 
-This project focuses on detecting fraudulent transactions using machine learning techniques. By analysing transaction patterns, the model classifies transactions as legitimate or fraudulent, helping improve security in financial systems.
+## Case Study
 
----
+### Problem
+Financial institutions face massive losses due to fraudulent transactions. The challenge is detecting **rare fraud events** accurately within **millions of highly imbalanced transactions** while minimizing false positives.
 
-## Project Overview
+### Context
+This project analyzes **6.3M+ real-world financial transactions** and builds a scalable **fraud detection system** using classical machine learning and imbalance-handling techniques.
 
-The objective is to build a classification model that accurately identifies fraudulent transactions based on historical data. The workflow includes data preprocessing, feature engineering, model training, hyperparameter tuning, and evaluation using key classification metrics.
+### Impact
+- Achieved **99.6% accuracy** with an optimized Random Forest model
+- **98% recall** on fraud cases (critical for fraud prevention)
+- Near-perfect **ROC-AUC: 0.999**
+- Successfully detected fraudulent transactions in unseen data
 
----
-
-## Features
-
-- **Exploratory Data Analysis (EDA)**  
-  Analysed transaction patterns to uncover trends and detect data anomalies.
-
-- **Data Preprocessing**  
-  Handled missing values, outlier detection using Z-Score, encoding categorical variables, and scaling numerical features.
-
-- **Feature Engineering**  
-  Selected and engineered significant features to improve model accuracy.
-
-- **Model Building & Tuning**  
-  Trained classification models including Random Forest and Logistic Regression. Performed hyperparameter tuning using GridSearchCV and RandomizedSearchCV for optimal performance.
-
-- **Evaluation Metrics**  
-  Evaluated model using Accuracy, Precision, Recall, F1-Score, and AUC-ROC.
+### Why It Matters
+High recall and precision are essential in fraud detection to **prevent financial loss** while maintaining customer trust and minimizing false alerts.
 
 ---
 
-## Libraries Used
+## What I Did
 
-- **NumPy** – Numerical computations and array operations
-- **Pandas** – Data manipulation and analysis
-- **Matplotlib** – Data visualisation
-- **Seaborn** – Statistical visualisations and correlation plots
-- **SciPy (zscore)** – Outlier detection
-- **Scikit-learn (sklearn):**
-  - Data Splitting: `train_test_split`
-  - Scaling: `StandardScaler`
-  - Models: `RandomForestClassifier`, `LogisticRegression`
-  - Hyperparameter Tuning: `GridSearchCV`, `RandomizedSearchCV`
-  - Metrics: `accuracy_score`, `precision_score`, `recall_score`, `f1_score`, `classification_report`
+- Designed an **end-to-end fraud detection pipeline** on large-scale data
+- Cleaned and preprocessed **6M+ transactions**
+- Handled **extreme class imbalance** using SMOTE
+- Engineered fraud-relevant behavioral features
+- Trained, evaluated, and optimized multiple ML models
+- Built a real-time fraud prediction workflow
 
 ---
-## Project Structure
+
+## How I Did It (STAR Method)
+
+### Situation
+The dataset was extremely large, noisy, and **highly imbalanced** (<0.2% fraud cases), making naive modeling ineffective.
+
+### Task
+Build a scalable, high-recall fraud detection model while minimizing false positives.
+
+### Action
+- Performed data cleaning (null checks, duplicate removal)
+- Encoded categorical variables (transaction types)
+- Detected and removed extreme outliers using **Z-score**
+- Analyzed feature correlations to reduce redundancy
+- Applied **SMOTE** to balance minority fraud class
+- Standardized numerical features using **StandardScaler**
+- Trained and compared:
+  - Logistic Regression (baseline)
+  - Random Forest Classifier
+- Evaluated models using:
+  - Accuracy, Precision, Recall, F1-score
+  - ROC-AUC and Precision-Recall AUC
+- Tuned Random Forest using **RandomizedSearchCV**
+- Built a prediction system for new transactions
+
+### Result
+- **Optimized Random Forest Performance**
+  - Accuracy: **99.6%**
+  - Precision: **97.6%**
+  - Recall: **98.1%**
+  - F1-score: **97.8%**
+  - ROC-AUC: **0.999**
+- Strong generalization on unseen data
+- Reliable detection of fraudulent transactions
+
+---
+
+## Tech Stack
+
+- **Programming Language:** Python
+- **Data Processing:** Pandas, NumPy
+- **Visualization:** Matplotlib, Seaborn
+- **Machine Learning:** Scikit-learn
+- **Models:** Logistic Regression, Random Forest
+- **Imbalance Handling:** SMOTE (imbalanced-learn)
+- **Scaling:** StandardScaler
+- **Hyperparameter Tuning:** RandomizedSearchCV
+- **Evaluation Metrics:** Accuracy, Precision, Recall, F1, ROC-AUC, PR-AUC
+
+---
+
+## Key Results / Business Impact
+
+- Detected fraud with **high recall**, reducing financial loss
+- Minimized false positives while maintaining strong accuracy
+- Demonstrated scalable ML pipeline for real-world financial systems
+- Built a strong baseline for production-grade fraud detection
+
+---
+
+## Example Prediction
+
+```text
+Input Transaction:
+- Type: TRANSFER
+- Amount: 181.00
+- Balance Change: Sudden drop to zero
+
+Model Output:
+Fraudulent
 ```
-Fraud_Detection_Model
-├── README.md # Project documentation
-├── notebooks
-│ └── Fraud_detection_.ipynb # Jupyter Notebook with full workflow
-├── data
-│ └── transactions.csv # Dataset file
-├── requirements.txt # Required Python libraries
-
-```
----
-
-
----
-
-## Dataset Overview
-
-The dataset contains transaction records with the following features:
-- **Transaction ID** — Unique identifier for each transaction
-- **Amount** — Transaction value
-- **Time** — Timestamp of transaction
-- **Location** — Transaction location
-- **Card Type** — Type of card used for the transaction
-- **Fraud Label (Target Variable)**  
-  - `1` — Fraudulent Transaction  
-  - `0` — Legitimate Transaction
-
----
-
-## Results
-
-The best-performing model achieved the following metrics:
-- Precision: 95%  
-- Recall: 92%  
-- AUC-ROC: 97%
-
-These results demonstrate the model's effectiveness in accurately identifying fraudulent transactions while minimising false positives.
-
----
-
-## Conclusion
-
-This project demonstrates the use of machine learning models for fraud detection in financial transactions. By applying robust data preprocessing, feature selection, and model tuning techniques, the model achieves high precision and recall, making it a reliable tool for detecting fraudulent activities in large datasets.
-
----
